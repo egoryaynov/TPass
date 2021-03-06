@@ -1,5 +1,6 @@
 const gulp = require('gulp');
-const { series, parallel } = gulp;
+const {series, parallel} = gulp;
+const ghPages = require('gulp-gh-pages');
 
 const sass = require('gulp-sass');
 //const fontgen = require('gulp-fontgen');
@@ -24,7 +25,7 @@ const style = () => {
 
 // BUILD PROJECT TO 'dist/', MINIFY, AUTOPREFIX
 const cleanBuild = () => {
-    return gulp.src('dist/*', { read: false })
+    return gulp.src('dist/*', {read: false})
         .pipe(clean());
 };
 
@@ -43,7 +44,7 @@ const minimizeStyles = () => {
         }))
         .pipe(cleanCSS({
             level: {
-                1: { specialComments: 0 }
+                1: {specialComments: 0}
             }
         }))
         .pipe(gulp.dest('dist/styles/'));
@@ -72,7 +73,7 @@ const allJs = () => {
 //HTML
 const minimizeHTML = () => {
     return gulp.src('app/*.html')
-        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('dist'));
 };
 
@@ -81,8 +82,6 @@ const fonts = () => {
     return gulp.src('app/fonts/**/*.*')
         .pipe(gulp.dest('dist/fonts'));
 };
-
-
 
 const watch = () => {
     browserSync.init({
@@ -95,6 +94,14 @@ const watch = () => {
     gulp.watch('app/*.html').on('change', browserSync.reload);
     //gulp.watch('app/fonts/*.{ttf, otf}', fonts);
 };
+
+// BUILD
+const deployOnGhPages = () => {
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages());
+}
+
+exports.deploy = series(deployOnGhPages);
 
 exports.style = series(style);
 exports.clean = series(cleanBuild);

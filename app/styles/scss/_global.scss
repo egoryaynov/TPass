@@ -1,0 +1,155 @@
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: $primary-color;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  height: 100%;
+}
+
+h1 {
+  font-size: 55px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+p {
+  color: $primary-text-color;
+}
+
+.text-color {
+  &--blue {
+    color: $color-blue;
+  }
+
+  &--orange {
+    color: $color-orange;
+  }
+}
+
+.button {
+  padding: 19px 20px;
+  border: none;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
+
+  &--blue {
+    background-color: $color-blue;
+  }
+
+  &--black {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  &_icon {
+    margin-left: 15px;
+  }
+}
+
+.promo-block {
+  background-color: $color-grey;
+  border-radius: 50px;
+  position: relative;
+  height: 540px;
+  display: flex;
+  align-items: center;
+
+  &__image {
+    height: 640px;
+    position: absolute;
+    bottom: 50px;
+    top: -50px;
+  }
+
+  &__content {
+    width: 404px;
+  }
+
+  &__heading {
+    font-weight: 500;
+  }
+
+  &__title {
+    line-height: 55px;
+    margin: 22px 0;
+  }
+
+  &__text {
+    line-height: 24px;
+  }
+
+  &__dots-wrapper {
+    display: flex;
+    margin-top: 50px;
+
+    & div:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    background-color: #E3E6E8;
+    border-radius: 10px;
+  }
+
+  &__line {
+    width: 55px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: $color-blue;
+  }
+
+  &--right {
+    .promo-block__image {
+      width: 544px;
+      right: 0;
+    }
+
+    .promo-block__content {
+      margin-left: 140px;
+    }
+  }
+
+  &--left {
+    justify-content: flex-end;
+
+    .promo-block__image {
+      left: 30px;
+      width: 579px;
+    }
+
+    .promo-block__content {
+      margin-right: 140px;
+    }
+  }
+}

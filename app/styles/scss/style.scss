@@ -57,7 +57,12 @@
       font-size: 14px;
       font-weight: 700;
       text-decoration: none;
-      color: $primary-color
+      color: $primary-color;
+      transition: .2s;
+
+      &:hover {
+        color: $color-blue;
+      }
     }
   }
 
@@ -281,9 +286,14 @@
     &-item {
       padding: 16px 32px;
       background-color: #240C39;
+      transition: .2s;
 
       &:nth-child(1) {
         margin-right: 25px;
+      }
+
+      &:hover {
+        background-color: #35135b;
       }
     }
   }
@@ -353,6 +363,11 @@
       color: rgba(255, 255, 255, 0.7);
       font-size: 14px;
       line-height: 20px;
+      transition: .2s;
+
+      &:hover {
+        color: rgba(255, 255, 255, 1)
+      }
     }
 
     &-item {

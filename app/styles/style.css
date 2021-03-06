@@ -344,7 +344,7 @@ p {
   color: #576D81; }
 
 .text-color--blue {
-  color: #00CCCC; }
+  color: #00cccc; }
 
 .text-color--orange {
   color: #F3AF47; }
@@ -357,12 +357,18 @@ p {
   justify-content: center;
   align-items: center;
   font-weight: 700;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: .3s; }
   .button--blue {
-    background-color: #00CCCC; }
+    background-color: #00cccc; }
+    .button--blue:hover {
+      background-color: #28b7b7;
+      color: #000000; }
   .button--black {
     background-color: #0F2336;
     color: #fff; }
+    .button--black:hover {
+      background-color: #00cccc; }
   .button_icon {
     margin-left: 15px; }
 
@@ -401,7 +407,7 @@ p {
     width: 55px;
     height: 10px;
     border-radius: 10px;
-    background-color: #00CCCC; }
+    background-color: #00cccc; }
   .promo-block--right .promo-block__image {
     width: 544px;
     right: 0; }
@@ -440,7 +446,10 @@ p {
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
-    color: #0F2336; }
+    color: #0F2336;
+    transition: .2s; }
+    .header__nav-link:hover {
+      color: #00cccc; }
   .header__content {
     margin-top: 120px; }
     .header__content-inner {
@@ -576,9 +585,12 @@ p {
     margin-top: 20px; }
   .feedback__download-item {
     padding: 16px 32px;
-    background-color: #240C39; }
+    background-color: #240C39;
+    transition: .2s; }
     .feedback__download-item:nth-child(1) {
       margin-right: 25px; }
+    .feedback__download-item:hover {
+      background-color: #35135b; }
 
 .footer {
   padding-top: 70px;
@@ -614,7 +626,7 @@ p {
   .footer__navigation {
     display: flex; }
     .footer__navigation-title {
-      color: #00CCCC;
+      color: #00cccc;
       font-size: 12px; }
     .footer__navigation-list {
       list-style: none;
@@ -625,6 +637,9 @@ p {
       text-decoration: none;
       color: rgba(255, 255, 255, 0.7);
       font-size: 14px;
-      line-height: 20px; }
+      line-height: 20px;
+      transition: .2s; }
+      .footer__navigation-link:hover {
+        color: white; }
     .footer__navigation-item:not(:last-child) {
       margin-right: 80px; }

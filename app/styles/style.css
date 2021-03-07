@@ -360,7 +360,8 @@ p {
   cursor: pointer;
   transition: .3s; }
   .button--blue {
-    background-color: #00cccc; }
+    background-color: #00cccc;
+    font-size: 18px; }
     .button--blue:hover {
       background-color: #28b7b7;
       color: #000000; }
@@ -450,6 +451,8 @@ p {
     transition: .2s; }
     .header__nav-link:hover {
       color: #00cccc; }
+  .header__nav-button {
+    font-size: 14px; }
   .header__content {
     margin-top: 120px; }
     .header__content-inner {
@@ -529,19 +532,13 @@ p {
     width: 85px;
     display: flex;
     align-items: center;
-    justify-content: center; }
-    .discounts__content-icon-wrapper::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 55px;
-      height: 55px;
-      background-color: #F6F7F8;
-      z-index: 5; }
+    justify-content: center;
+    background-color: #F6F7F8; }
   .discounts__content-icon {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 10; }
 
 .send-gifts__promo-title {
@@ -597,8 +594,7 @@ p {
   padding-bottom: 100px;
   background-color: #0F2336;
   position: relative;
-  height: 300px;
-  overflow: hidden; }
+  height: 300px; }
   .footer:before {
     content: '';
     display: block;
@@ -607,7 +603,7 @@ p {
     width: 230px;
     height: 310px;
     position: absolute;
-    bottom: 12px;
+    bottom: 54px;
     left: 0; }
   .footer:after {
     content: '';
@@ -615,7 +611,7 @@ p {
     background-image: url("../images/footer/right-image.svg");
     background-repeat: no-repeat;
     width: 155px;
-    height: 310px;
+    height: 256px;
     position: absolute;
     top: 44px;
     bottom: 0;

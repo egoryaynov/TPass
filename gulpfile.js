@@ -95,7 +95,7 @@ const watch = () => {
     //gulp.watch('app/fonts/*.{ttf, otf}', fonts);
 };
 
-// BUILD
+// DEPLOY
 const deployOnGhPages = () => {
     return gulp.src('./dist/**/*')
         .pipe(ghPages());
